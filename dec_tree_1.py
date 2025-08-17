@@ -7,6 +7,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor   #Contains all the functions related to Decision Trees.
 from sklearn.metrics import r2_score
 
+import joblib   #This is the library where we can save our model.
+import os
+
 df = pd.read_csv('dataset/housing.csv', delim_whitespace=True)
 
 X = df[['RM']]   #This is our main attribute we'll use for the Decision Tree.
@@ -24,3 +27,12 @@ r2 = r2_score(y_test, y_pred)   #Compare the predicted value we get from our mod
 
 print("\n--- Model Evaluation ---")
 print(f"R-squared (R2): {r2:.2f}")
+
+model_folder = 'models'
+os.makedirs(model_folder, exist_ok=True)
+
+model_filename = 'decision_tree_model.joblib'   #Give a name to the model file.
+full_path = os.path.join(model_folder, model_filename)
+joblib.dump(model, full_path)   #Save the model.
+
+print(f"Model trained successfully and save to '{model_filename}'.")
