@@ -1,3 +1,5 @@
+#This is a simple script to just get used to the given dataset by going through some of the basic stuff, like headers, number of unique entries, mean, median, etc.
+
 import pandas as pd
 
 df = pd.read_csv('dataset/housing.csv')

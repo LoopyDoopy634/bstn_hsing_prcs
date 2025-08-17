@@ -1,3 +1,8 @@
+#This script is used to generate 3 different types of visualization of the given data.
+#1. Histogram showing the distribution of the prices.
+#2. Scatter Plot showing the comparison/relation between the Number of Rooms and Hosuing Prices.
+#3. Heatmap showing correlation between every single attribute.
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns

@@ -1,3 +1,6 @@
+#This script checks if the given dataset has headers (i.e. column headings) or not.
+#If yes, it does nothing else, otherwise it will add the required headers.
+
 import csv
 
 def add_header_if_missing(filename, header):
