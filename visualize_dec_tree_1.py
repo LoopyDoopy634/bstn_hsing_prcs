@@ -1,3 +1,5 @@
+#This script gives a visualization of the Decision Tree model.
+
 import matplotlib.pyplot as plt   #Used for generating digarams.
 from sklearn.tree import plot_tree   #Used for complex diagrams.
 import joblib   #Used for saving and loading our models.
